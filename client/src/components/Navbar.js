@@ -1,10 +1,34 @@
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { FaRibbon } from "react-icons/fa";
 
 function Navbar() {
     const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleNavigateHome = () => {
+        navigate("/");
+      };
 
     const isActive = (path) => location.pathname === path;
+
+    const handleScrollToAbout = () => {
+        if (location.pathname !== "/") {
+          // If not on the homepage, navigate first and then scroll
+          navigate("/");
+          setTimeout(() => {
+            const aboutSection = document.getElementById("about");
+            if (aboutSection) {
+              aboutSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }, 500);
+        } else {
+          // If on the homepage, directly scroll to the About section
+          const aboutSection = document.getElementById("about");
+          if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      };
     
     return(
         <nav className='bg-pink-600 shadow-lg py-4'>
@@ -18,8 +42,13 @@ function Navbar() {
 
                 <div className='space-x-6'>
                     <Link to="/" className={`${ isActive("/") ? "text-pink-300" : "text-white"} hover:text-pink-200`}>Home</Link>
-                    <Link to="/assess" className={`${ isActive("/assess") ? "text-pink-300" : "text-white"} hover:text-pink-200`}>Assess</Link>
-                    <Link to="/tools" className={`${ isActive("/tools") ? "text-pink-300" : "text-white"} hover:text-pink-200`}>Tools</Link>
+                    <button
+                        onClick={handleScrollToAbout}
+                        className={ "text-white hover:text-pink-200 cursor-pointer" } 
+                    >
+                        About
+                    </button>
+                    <Link to="/wall" className={`${ isActive("/wall") ? "text-pink-300" : "text-white"} hover:text-pink-200`}>Wall</Link>
                     <Link to="/resources" className={`${ isActive("/resources") ? "text-pink-300" : "text-white"} hover:text-pink-200`}>Resources</Link>
                 </div>
             </div>

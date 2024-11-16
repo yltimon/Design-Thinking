@@ -48,6 +48,9 @@ function AssessmentForm() {
 
     return (
         <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+          <div>
+            <h2>Complete the assessment below as part of the onboarding process</h2>
+          </div>
           <h1 className="text-2xl font-bold mb-6">Breast Cancer Risk Assessment</h1>
           <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-3/4 md:w-1/2 lg:w-1/3">
             <div className="mb-4">
