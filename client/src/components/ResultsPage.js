@@ -11,7 +11,7 @@ const ResultsPage = () => {
   const htmlContent = marked(result);
 
   return (
-    <div className="flex flex-col items-center justify-center h-3/4 bg-gray-100 p-4">
+    <div className="flex flex-col items-center justify-center h-3/4 bg-pink-100 p-4">
       <div className="bg-white p-6 rounded shadow-md w-full h-fit md:w-3/4 lg:w-1/2">
         <h1 className="text-2xl font-bold mb-4 text-center">Assessment Report</h1>
         <div className="text-gray-700 mb-6">
@@ -27,7 +27,7 @@ const ResultsPage = () => {
           </div>
         </div>
         <button
-          className="w-full p-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          className="w-full p-2 bg-pink-600 text-white rounded hover:bg-pink-700"
           onClick={() => navigate("/")}
         >
           Continue with Onboarding

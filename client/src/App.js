@@ -10,11 +10,14 @@ import Why from "./components/Why";
 import SelfAssessment from "./components/SelfAssess";
 import CommunityPage from "./components/CommunityPage";
 import Wall from "./components/Wall";
+import GeneticScreeningPage from "./components/GeneticScreeningPage";
+import Chatbot from "./components/Chatbot";
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <Chatbot />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/assess" element={<AssessmentForm />} />
@@ -26,6 +29,7 @@ function App() {
         <Route path="/selfassess" element={<SelfAssessment />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route path="/wall" element={<Wall />} />
+        <Route path="/screening" element={<GeneticScreeningPage />} />
       </Routes>
     </Router>
   );

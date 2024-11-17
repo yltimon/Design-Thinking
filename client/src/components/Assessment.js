@@ -47,7 +47,7 @@ function AssessmentForm() {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+        <div className="flex flex-col items-center justify-center h-screen bg-pink-100">
           <div>
             <h2>Complete the assessment below as part of the onboarding process</h2>
           </div>
@@ -166,7 +166,7 @@ function AssessmentForm() {
               />
             </div>
     
-            <button type="submit" className="w-full p-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+            <button type="submit" className="w-full p-2 bg-pink-600 text-white rounded hover:bg-pink-700">
               Submit
             </button>
           </form>

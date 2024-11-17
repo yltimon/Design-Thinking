@@ -1,3 +1,4 @@
+// src/components/Wall.jsx
 import React, { useState } from "react";
 import { articlesData } from "./data/articlesData";
 
@@ -38,69 +39,69 @@ const Wall = () => {
   };
 
   return (
-    <div className="bg-pink-100">
-        <div className="p-6  min-h-screen container mx-auto">
-        <h1 className="text-2xl text-center font-bold mb-4">Community Wall</h1>
+    <div className=" bg-pink-100">
+      <div className="p-6 container mx-auto min-h-screen">
+        <h1 className="text-2xl text-center font-bold mb-4">Article Wall</h1>
         
         {/* New Article Form */}
         <div className="bg-white p-4 rounded-lg shadow-lg mb-6">
-            <h2 className="text-lg font-semibold mb-4">Share Your Story</h2>
-            <form onSubmit={handleSubmit}>
+          <h2 className="text-lg font-semibold mb-4">Share Your Story</h2>
+          <form onSubmit={handleSubmit}>
             <input
-                type="text"
-                name="title"
-                placeholder="Title"
-                value={newArticle.title}
-                onChange={handleInputChange}
-                className="w-full p-2 mb-2 border rounded"
-                required
+              type="text"
+              name="title"
+              placeholder="Title"
+              value={newArticle.title}
+              onChange={handleInputChange}
+              className="w-full p-2 mb-2 border rounded"
+              required
             />
             <textarea
-                name="content"
-                placeholder="Write your article here..."
-                value={newArticle.content}
-                onChange={handleInputChange}
-                className="w-full p-2 mb-2 border rounded"
-                rows="5"
-                required
+              name="content"
+              placeholder="Write your article here..."
+              value={newArticle.content}
+              onChange={handleInputChange}
+              className="w-full p-2 mb-2 border rounded"
+              rows="5"
+              required
             />
             <input
-                type="text"
-                name="author"
-                placeholder="Your name (optional)"
-                value={newArticle.author}
-                onChange={handleInputChange}
-                className="w-full p-2 mb-2 border rounded"
+              type="text"
+              name="author"
+              placeholder="Your name (optional)"
+              value={newArticle.author}
+              onChange={handleInputChange}
+              className="w-full p-2 mb-2 border rounded"
             />
             <button
-                type="submit"
-                className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+              type="submit"
+              className="bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600"
             >
-                Post Article
+              Post Article
             </button>
-            </form>
+          </form>
         </div>
 
         {/* Articles List */}
         <div className="space-y-4">
-            {articles.length > 0 ? (
+          {articles.length > 0 ? (
             articles.map((article) => (
-                <div
+              <div
                 key={article.id}
                 className="bg-white p-4 rounded-lg shadow-lg"
-                >
+              >
                 <h3 className="text-xl font-semibold">{article.title}</h3>
                 <p className="text-gray-600 text-sm mb-2">
-                    by {article.author} | {article.date}
+                  by {article.author} | {article.date}
                 </p>
                 <p>{article.content}</p>
-                </div>
+              </div>
             ))
-            ) : (
+          ) : (
             <p className="text-gray-600">No articles yet. Be the first to share!</p>
-            )}
+          )}
         </div>
-        </div>
+      </div>
     </div>
   );
 };

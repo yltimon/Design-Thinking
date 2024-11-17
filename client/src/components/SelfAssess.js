@@ -35,8 +35,8 @@ const slides = [
   },
   {
     image: step6,
-    title: "Step 6: Palpation Standing Up",
-    description: "Feel your breasts while standing. It's often easiest to feel them when the skin is wet, such as in the shower.",
+    title: "Step 6: Palpation Lying Down",
+    description: "Feel your breasts while lying down.",
   },
 ];
 

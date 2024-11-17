@@ -36,7 +36,7 @@ function Navbar() {
                 <div>
                     <Link className='flex items-center text-xl font-bold' to="/">
                         <FaRibbon/>
-                        <h1 className='text-white'>BreastCancer</h1>
+                        <h1 className='text-white'>MyBreast Care</h1>
                     </Link>
                 </div>
 

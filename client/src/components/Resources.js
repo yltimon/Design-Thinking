@@ -7,6 +7,10 @@ function Resources() {
         navigate("/")
     }
 
+    const handleScreeningClicked = () => {
+        navigate("/screening")
+    }
+
     const handleGroupClicked = () => {
         navigate("/community")
     }
@@ -37,9 +41,9 @@ function Resources() {
                     <button className="bg-pink-400 hover:bg-pink-500 text-white font-medium py-2 px-4 rounded-lg mt-10" onClick={handleGroupClicked}>Find Groups</button>
                 </div>
                 <div className="shadow-lg rounded-lg p-6">
-                    <h2 className="text-xl font-semibold mb-2">Related Articles</h2>
-                    <p className="text-left">Access a curated selection of articles offering insights, research findings, and the latest updates on breast cancer.</p>
-                    <button className="bg-pink-400 hover:bg-pink-500 text-white font-medium py-2 px-4 rounded-lg mt-4" onClick={handleChatbotClicked}>Read Articles</button>
+                    <h2 className="text-xl font-semibold mb-2">Components of Screening</h2>
+                    <p className="text-left">Learn about both genetic and breast screening today.</p>
+                    <button className="bg-pink-400 hover:bg-pink-500 text-white font-medium py-2 px-4 rounded-lg mt-4" onClick={handleScreeningClicked}>Learn </button>
                 </div>
             </div>
         </div>
